@@ -6,9 +6,9 @@ This is a project I'm using to help me understand node, express, and api's a lit
 
 - [x] Create routes for index and gif endpoint
 - [x] Set up request to api for a random gif
-- [ ] Create index template
-- [ ] Add form to request tag fromuser
-- [ ] Style the index template
+- [x] Create index template
+- [x] Add form to request tag from user
+- [x] Style the index template
 - [ ] Add client side JS to display the random gif
 
 ## Author
