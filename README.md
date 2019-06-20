@@ -4,8 +4,8 @@ This is a project I'm using to help me understand node, express, and api's a lit
 
 # TODO
 
-- [ ] Create routes for index and gif endpoint
-- [ ] Set up request to api for a random gif
+- [x] Create routes for index and gif endpoint
+- [x] Set up request to api for a random gif
 - [ ] Create index template
 - [ ] Add form to request tag fromuser
 - [ ] Style the index template
