@@ -4,6 +4,7 @@
   "description": "This is a project I'm using to help me understand node, express, and api's a little better. It's a pretty simple project, with the goal to have a user generate a random gif, based on a tag they enter.",
   "main": "index.js",
   "scripts": {
+    "start": "node src/server.js",
     "dev": "nodemon src/server.js -e js,hbs"
   },
   "repository": {
