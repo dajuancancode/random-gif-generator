@@ -27,11 +27,11 @@ app.get('/help', (req, res) => {
 });
 
 app.get('/gif', (req, res) => {
-  gifRequest('Gaming', (error, data) => {
+  gifRequest(req.query.tag, (error, data) => {
     if (error) {
       return res.send({
         error,
-        sadGif: 'https://giphy.com/gifs/OPU6wzx8JrHna/html5',
+        sadGif: 'https://giphy.com/embed/OPU6wzx8JrHna',
       });
     }
     res.send({ gifUrl: data });

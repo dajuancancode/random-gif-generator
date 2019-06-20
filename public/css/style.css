@@ -37,3 +37,9 @@ button {
   background: #888888;
   cursor: pointer;
 }
+
+.errorMessage {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}

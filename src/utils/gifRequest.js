@@ -19,6 +19,11 @@ const gifRequest = (tagName, callback) => {
   request(options, (err, { body } = {}) => {
     if (err) {
       callback('Unable to connect to giphy services', undefined);
+    } else if (body.data.embed_url === undefined) {
+      callback(
+        "We couldn't find a gif, so here's sad patrick instead",
+        undefined
+      );
     } else {
       callback(undefined, body.data.embed_url);
     }

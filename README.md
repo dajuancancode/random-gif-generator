@@ -9,7 +9,7 @@ This is a project I'm using to help me understand node, express, and api's a lit
 - [x] Create index template
 - [x] Add form to request tag from user
 - [x] Style the index template
-- [ ] Add client side JS to display the random gif
+- [x] Add client side JS to display the random gif
 
 ## Author
 
@@ -17,3 +17,8 @@ This is a project I'm using to help me understand node, express, and api's a lit
 
 - Twitter: [@dajuancancode](www.twitter.com/dajuancancode)
 - Github: [@dajuancancode](www.github.com/dajuancancode)
+
+## Future Ideas
+  - Swap out handlebars for react
+  - Spend some time coming up with a quality design
+  - Make it responsive
