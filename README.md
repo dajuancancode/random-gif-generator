@@ -2,7 +2,7 @@
 
 This is a project I'm using to help me understand node, express, and api's a little better. It's a pretty simple project, with the goal to have a user generate a random gif, based on a tag they enter.
 
-# TODO
+## TODO
 
 - [x] Create routes for index and gif endpoint
 - [x] Set up request to api for a random gif
@@ -11,7 +11,7 @@ This is a project I'm using to help me understand node, express, and api's a lit
 - [ ] Style the index template
 - [ ] Add client side JS to display the random gif
 
-# Author
+## Author
 
 👨🏽‍💻 DaJuan Harris
 

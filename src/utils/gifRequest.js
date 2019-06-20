@@ -1,4 +1,7 @@
+require('dotenv').config();
 const request = require('request');
+
+const { GIPHY_API_KEY } = process.env;
 
 const gifRequest = (tagName, callback) => {
   const encodedTag = encodeURIComponent(tagName);
@@ -9,7 +12,7 @@ const gifRequest = (tagName, callback) => {
     json: true,
     headers: {
       'User-Agent': 'request',
-      api_key: 'xKZGxgGWdQ3Wfszbe2crspBQz5zRvS08',
+      api_key: `${GIPHY_API_KEY}`,
     },
   };
 
