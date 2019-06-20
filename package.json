@@ -1,14 +1,22 @@
 {
   "name": "random-gif-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a project I'm using to help me understand node, express, and api's a little better. It's a pretty simple project, with the goal to have a user generate a random gif, based on a tag they enter.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/server.js -e js,hbs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dajuancancode/random-gif-generator.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dajuancancode/random-gif-generator/issues"
+  },
+  "homepage": "https://github.com/dajuancancode/random-gif-generator#readme",
   "devDependencies": {
     "babel-eslint": "^9.0.0",
     "eslint": "^5.14.1",
@@ -21,6 +29,12 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.3.0",
+    "nodemon": "^1.19.1",
     "prettier": "^1.16.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.0.4",
+    "request": "^2.88.0"
   }
 }
