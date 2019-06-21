@@ -19,18 +19,19 @@ const gifRequest = (query, callback) => {
   request(options, (err, { body } = {}) => {
     if (err) {
       callback('Unable to connect to giphy services', undefined);
+    } else if (!body.data.length === 0) {
+      callback(
+        "We couldn't find a gif, so here's sad patrick instead",
+        undefined
+      );
     } else {
-      const randomNumber = Math.floor(Math.random() * 10) + 1;
+      let randomNumber = Math.floor(Math.random() * 10) + 1;
+      if (randomNumber > body.data.length) {
+        randomNumber = 0;
+      }
       callback(undefined, body.data[randomNumber]);
     }
   });
 };
 
 module.exports = gifRequest;
-
-// else if (!body.data.embed_url) {
-//   callback(
-//     "We couldn't find a gif, so here's sad patrick instead",
-//     undefined
-//   );
-// }
