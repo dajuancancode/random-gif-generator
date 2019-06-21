@@ -3,9 +3,9 @@ const request = require('request');
 
 const { GIPHY_API_KEY } = process.env;
 
-const gifRequest = (tagName, callback) => {
-  const encodedTag = encodeURIComponent(tagName);
-  const url = `https://api.giphy.com/v1/gifs/random?tag=${encodedTag}&rating=g`;
+const gifRequest = (query, callback) => {
+  const encodedTag = encodeURIComponent(query);
+  const url = `https://api.giphy.com/v1/gifs/search?q=${encodedTag}&limit=10`;
 
   const options = {
     url,
@@ -19,15 +19,18 @@ const gifRequest = (tagName, callback) => {
   request(options, (err, { body } = {}) => {
     if (err) {
       callback('Unable to connect to giphy services', undefined);
-    } else if (!body.data.embed_url) {
-      callback(
-        "We couldn't find a gif, so here's sad patrick instead",
-        undefined
-      );
     } else {
-      callback(undefined, body.data.embed_url);
+      const randomNumber = Math.floor(Math.random() * 10) + 1;
+      callback(undefined, body.data[randomNumber]);
     }
   });
 };
 
 module.exports = gifRequest;
+
+// else if (!body.data.embed_url) {
+//   callback(
+//     "We couldn't find a gif, so here's sad patrick instead",
+//     undefined
+//   );
+// }

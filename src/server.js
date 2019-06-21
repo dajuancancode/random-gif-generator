@@ -27,14 +27,14 @@ app.get('/help', (req, res) => {
 });
 
 app.get('/gif', (req, res) => {
-  gifRequest(req.query.tag, (error, data) => {
+  gifRequest(req.query.q, (error, data) => {
     if (error) {
       return res.send({
         error,
         sadGif: 'https://giphy.com/embed/OPU6wzx8JrHna',
       });
     }
-    res.send({ gifUrl: data });
+    res.send({ gifUrl: data.embed_url });
   });
 });
 

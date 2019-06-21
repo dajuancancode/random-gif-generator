@@ -8,7 +8,7 @@ formField.addEventListener('submit', e => {
 
   const tag = inputField.value;
 
-  fetch(`/gif?tag=${tag}`).then(response => {
+  fetch(`/gif?q=${tag}`).then(response => {
     response.json().then(data => {
       if (data.error) {
         errorEl.textContent = data.error;
