@@ -28,9 +28,9 @@ app.get('/help', (req, res) => {
 
 app.get('/gif', (req, res) => {
   gifRequest(req.query.q, (error, data) => {
-    if (error) {
+    if (error || !data) {
       return res.send({
-        error,
+        error: "We couldn't find a gif, so here's sad patrick instead.",
         sadGif: 'https://giphy.com/embed/OPU6wzx8JrHna',
       });
     }

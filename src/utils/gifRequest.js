@@ -19,7 +19,7 @@ const gifRequest = (query, callback) => {
   request(options, (err, { body } = {}) => {
     if (err) {
       callback('Unable to connect to giphy services', undefined);
-    } else if (!body.data.length === 0) {
+    } else if (body.data.length === 0) {
       callback(
         "We couldn't find a gif, so here's sad patrick instead",
         undefined
